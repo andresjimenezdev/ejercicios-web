@@ -1,0 +1,179 @@
+/* (START) Variables Definitions */
+:root {
+    /* Font Family */
+    --font-family: Arial, sans-serif;
+
+    /* Font Sizes */
+    --small-fs: 13px;
+    --medium-fs: 14px;
+
+    /* Colors */
+    --text-dark-color: rgba(0, 0, 0, 0.87);
+    --text-gray-color: #222222;
+    --text-light-color: #5F6368;
+    --text-link-color: #1A0DAB;
+    --background-color: #F2F2F2;
+    --border-color: #DFE1E5;
+
+    /* Layout */
+    --space: 15px;
+}
+/* (FINISH) Variables Definitions */
+
+/* (START) Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* This styles are for footer positioning */
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    padding: 0 var(--space);
+    margin: 0 calc(var(--space) / 3);
+    border: none;
+    border-radius: 4px;
+    line-height: 2.5;
+    font-size: var(--medium-fs);
+    color: var(--text-light-color);
+}
+/* (FINISH) Base Styles */
+
+/* (START) Header Styles */
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    list-style: none;
+    font-size: var(--small-fs);
+    display: flex;
+    align-items: center;
+}
+
+    .menu__item {
+        padding-right: var(--space);
+    }
+
+    .menu__link {
+        color: var(--text-dark-color);
+    }
+
+    .menu__icon {
+        display: flex;
+        align-self: center;
+        font-size: 1rem;
+        vertical-align: center;
+    }
+
+    .menu__user {
+        max-width: 32px;
+        border-radius: 50%;
+    }
+/* (FINISH) Header Styles */
+
+/* (START) Main Section Styles */
+.main {
+    padding-top: calc(var(--space) * 6.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .main__brand {
+        padding-top: var(--space);
+    }
+
+    .main__text {
+        font-size: var(--small-fs);
+    }
+
+    .main__text span {
+        color: var(--text-link-color);
+    }
+
+.form {
+    width: 100%;
+    text-align: center;
+}
+
+    .form__input {
+        margin-top: calc(var(--space) * 1.5);
+        border: 1px solid var(--border-color);
+        border-radius: 24px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .form__icon i:before {
+        color: var(--text-light-color);
+        line-height: 2.5;
+        vertical-align: middle;
+        padding: 0 var(--space)
+    }
+
+    .form__text {
+        border: none;
+        width: 80%;
+        outline: none;
+    }
+
+    .form__button {
+        margin-top: calc(var(--space) * 1.5);
+        background-color: var(--background-color);
+        border: 1px solid var(--background-color);
+    }
+
+    .form__button:hover {
+        border: 1px solid var(--border-color);
+        box-shadow: 0 1px 1px var(--background-color);
+    }
+/* (FINISH) Main Section Styles */
+
+/* (START) Footer Styles */
+.footer {
+    width: 100%;
+    height: calc(var(--space) * 3);
+    background-color: var(--background-color);
+    border-top: 1px solid var(--border-color);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .footer__menu {
+        padding: 0;
+        margin-left: calc(var(--space) * 2);
+        margin-right: calc(var(--space) * 2);
+        vertical-align: middle;
+    }
+
+    .footer__menu .menu__item {
+        padding: 0;
+        margin: 0 calc(var(--space) * 0.75);
+    }
+
+    .footer__menu .menu__link {
+        font-size: var(--medium-fs);
+        color: var(--text-light-color);
+    }
+/* (FINISH) Footer Styles */
